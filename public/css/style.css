@@ -1,0 +1,52 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    text-align: center;
+    padding-top: 150px;
+    height: 100vh;
+    background-color: #a0a0a0;
+}
+
+h1{
+    color: red;
+    padding: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #007FFF;
+    padding: 5px;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: greenyellow;
+    padding: 50px;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("https://static.nexilia.it/isaechia/2019/10/Peaky-Blinders-3-e1572536509496.jpg");
+    background-repeat: no-repeat;
+}
+
+.contacts{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 250px;
+}
+
+.contacts > div{
+    padding: 15px;
+}
