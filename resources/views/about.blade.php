@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+
     <div>
         <h3>My name is {{ $name }} {{ $surname }}</h3>
         <h3>My email address is {{ $mail }}</h3>
     </div>
 
     <div>
-        @foreach($links as $key_url => $value)
-            <a href="{{ $value }}">{{ $key_url }}</a>
+        @foreach($links as $key_url => $url)
+            <a href="{{ $url }}">{{ $key_url }}</a>
         @endforeach
     </div>
 
