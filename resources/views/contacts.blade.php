@@ -8,7 +8,11 @@
 </head>
 <body>
 
-    <h1>Hello {{ $name }} </h1>
+    <div>
+        @foreach($parents as $value)
+            <p> {{ $value }}</p>
+        @endforeach
+    </div>
 
     <div>
         @foreach($links as $key_url => $value)

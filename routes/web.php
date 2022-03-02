@@ -14,5 +14,45 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home', ['name' => 'Word']);
+    $links = [
+        "home" => "/",
+        "about" => "/about",
+        "contacts" => "/contacts",
+    ];
+    return view('home', ['name' => 'Word'], ['links' => $links]);
+});
+
+Route::get('/about', function () {
+    $data = [
+        "name" => "Cezar",
+        "surname" => "Lantos",
+        "mail" => "cezar@yahoo.com",
+    ];
+    $links = [
+        "home" => "/",
+        "about" => "/about",
+        "contacts" => "/contacts",
+    ];
+
+    return view('about', $data, ['links' => $links]);
+});
+
+Route::get('/contacts', function () {
+    $contacts = [
+        "parents" => [
+            "Mimmo",
+            "Pasquale",
+            "Zio Enzo",
+            "Zia Concetta",
+            "Mario",
+            "Pluto",
+        ]
+    ];
+    $links = [
+        "home" => "/",
+        "about" => "/about",
+        "contacts" => "/contacts",
+    ];
+
+    return view('contacts', $contacts, ['links' => $links]);
 });
